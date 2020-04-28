@@ -633,7 +633,7 @@ export default class Dropdown extends PureComponent {
 
     return (
       <DropdownItem index={index} {...props}>
-        <Text style={[styles.item, itemTextStyle, textStyle, textStyleExtractor(item, index)]} numberOfLines={1}>
+        <Text style={[styles.item, itemTextStyle, textStyle, textStyleExtractor ? textStyleExtractor(item, index) : undefined]} numberOfLines={1}>
           {title}
         </Text>
       </DropdownItem>
